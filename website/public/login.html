@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>红圈项目看板系统 - 登录</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <main class="login-shell">
+      <section class="login-card">
+        <h1>红圈项目看板系统</h1>
+        <p>登录后可查看版本进度、风险预警、工时趋势和迭代详情，并支持触发华为云 IAM 账号验证。</p>
+        <form id="loginForm">
+          <div class="field">
+            <label for="username">用户名</label>
+            <input id="username" name="username" autocomplete="username" placeholder="请输入用户名" />
+          </div>
+          <div class="field">
+            <label for="password">密码</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="请输入密码" />
+          </div>
+          <div class="login-actions">
+            <button class="primary-button" type="submit">进入系统</button>
+          </div>
+          <div id="loginError" class="login-error"></div>
+        </form>
+      </section>
+    </main>
+    <script src="/assets/shared.js"></script>
+    <script src="/assets/login.js"></script>
+  </body>
+</html>

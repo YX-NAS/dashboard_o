@@ -1,0 +1,20 @@
+{
+  "period": "years",
+  "items": [
+    {
+      "label": "2024",
+      "totalHours": 51210.2,
+      "fillRate": 0.84
+    },
+    {
+      "label": "2025",
+      "totalHours": 54880.6,
+      "fillRate": 0.88
+    },
+    {
+      "label": "2026",
+      "totalHours": 14992.3,
+      "fillRate": 0.91
+    }
+  ]
+}

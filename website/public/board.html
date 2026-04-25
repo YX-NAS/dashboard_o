@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>红圈项目看板系统 - 主看板</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div>
+            <div class="eyebrow">项目看板</div>
+            <h1 class="page-title" id="projectName">红圈项目看板系统</h1>
+            <div class="hero-meta" id="projectMeta"></div>
+          </div>
+          <nav class="nav-links">
+            <a class="nav-link active" href="/board.html">主看板</a>
+            <a class="nav-link" href="/sprint.html">迭代详情</a>
+            <a class="nav-link" href="/retrospect.html">复盘页面</a>
+          </nav>
+        </div>
+        <div class="topbar-right">
+          <span class="muted" id="currentUser"></span>
+          <button class="secondary-button" id="refreshButton">验证并刷新</button>
+          <button class="secondary-button" id="logoutButton">退出登录</button>
+        </div>
+      </header>
+      <main class="app-main">
+        <section class="hero hero-board">
+          <div>
+            <div class="eyebrow">Dashboard</div>
+            <h2 class="page-title">📊 工时统计及项目进度、风险</h2>
+            <div class="hero-meta">对齐目标页的看板布局，聚合工时、进度、填报率、风险和 IAM 验证状态。</div>
+          </div>
+          <div class="hero-side">
+            <div class="hero-status-card">
+              <div class="metric-label">当前用户</div>
+              <div class="hero-status-value" id="currentUser"></div>
+              <div class="muted" id="verificationResult"></div>
+            </div>
+            <div class="status-message" id="statusMessage"></div>
+          </div>
+        </section>
+
+        <section class="grid card-grid board-stats">
+          <article class="panel stat-card">
+            <div class="metric-label">当日总工时</div>
+            <div class="metric-value" id="metricHours">-</div>
+            <div class="metric-note">总工时</div>
+          </article>
+          <article class="panel stat-card">
+            <div class="metric-label">填报人数</div>
+            <div class="metric-value" id="metricPeople">-</div>
+            <div class="metric-note">覆盖人数</div>
+          </article>
+          <article class="panel stat-card">
+            <div class="metric-label">团队数</div>
+            <div class="metric-value" id="metricTeams">-</div>
+            <div class="metric-note">参与团队</div>
+          </article>
+          <article class="panel stat-card">
+            <div class="metric-label">Bug总数</div>
+            <div class="metric-value" id="metricBugs">-</div>
+            <div class="metric-note">当日累计</div>
+          </article>
+          <article class="panel stat-card">
+            <div class="metric-label">平均填报率</div>
+            <div class="metric-value" id="metricFillRate">-</div>
+            <div class="metric-note">工时填报率</div>
+          </article>
+          <article class="panel stat-card">
+            <div class="metric-label">平均完成率</div>
+            <div class="metric-value" id="metricCompletion">-</div>
+            <div class="metric-note">项目进度</div>
+          </article>
+        </section>
+
+        <section class="panel board-strip">
+          <div class="strip-title">团队分布</div>
+          <div id="teamChips" class="team-chip-list"></div>
+        </section>
+
+        <section class="grid board-focus-grid">
+          <article class="panel">
+            <h2>Bug修复进度追踪</h2>
+            <div class="chart-box">
+              <canvas id="hoursChart"></canvas>
+            </div>
+          </article>
+          <article class="panel side-panel">
+            <h2>📝 工时填报率</h2>
+            <div id="fillRateList" class="progress-list"></div>
+          </article>
+        </section>
+
+        <section class="grid board-trend-grid">
+          <article class="panel">
+            <h2>📈 工时填报趋势</h2>
+            <div class="chart-box">
+              <canvas id="trendChart"></canvas>
+            </div>
+          </article>
+          <div class="grid board-side-stack">
+            <article class="panel">
+              <h2>🏆 填报率排名 & 分布</h2>
+              <div class="mini-grid">
+                <section>
+                  <h3 class="mini-title">🥇 Top 5 填报率最高团队</h3>
+                  <div id="rankTopList" class="rank-list"></div>
+                </section>
+                <section>
+                  <h3 class="mini-title">⚠️ Bottom 5 填报率最低团队</h3>
+                  <div id="rankBottomList" class="rank-list"></div>
+                </section>
+              </div>
+              <section style="margin-top: 18px;">
+                <h3 class="mini-title">📊 填报率分布</h3>
+                <div id="distributionList" class="distribution-list"></div>
+              </section>
+            </article>
+
+            <div class="grid mini-card-grid">
+              <article class="panel">
+                <h2>📋 分类小计</h2>
+                <div id="summaryStats" class="mini-stats"></div>
+              </article>
+              <article class="panel">
+                <h2>👥 人员清点</h2>
+                <div id="personnelStats" class="mini-stats"></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid board-bottom-grid">
+          <article class="panel">
+            <h2>👥 各团队工时明细</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>团队</th>
+                    <th>实际工时</th>
+                    <th>预估工时</th>
+                    <th>填报率</th>
+                    <th>完成率</th>
+                    <th>Bug</th>
+                    <th>未填报成员</th>
+                  </tr>
+                </thead>
+                <tbody id="teamTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+          <article class="panel">
+            <h2>🚨 风险预警</h2>
+            <div class="webhook-bar">🔔 飞书机器人 Webhook：<span id="webhookStatus">未配置</span></div>
+            <div class="mini-grid risk-side-blocks">
+              <section>
+                <h3 class="mini-title">最近刷新</h3>
+                <div class="risk-runtime" id="metricRefresh">-</div>
+              </section>
+              <section>
+                <h3 class="mini-title">IAM 校验</h3>
+                <div class="risk-runtime" id="runtimeStatus">-</div>
+              </section>
+            </div>
+            <div id="riskList" class="risk-list" style="margin-top: 18px;"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="/assets/shared.js"></script>
+    <script src="/assets/board.js"></script>
+  </body>
+</html>

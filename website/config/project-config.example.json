@@ -1,0 +1,31 @@
+{
+  "project": {
+    "name": "红圈项目看板系统",
+    "id": "ea9762777b694cbe8b099d7f6acb453c",
+    "account": "hecom-2024-hw",
+    "region": "cn-north-4"
+  },
+  "api": {
+    "iamEndpoint": "https://iam.cn-north-4.myhuaweicloud.com",
+    "codeartsEndpoint": "https://projectman-ext.cn-north-4.myhuaweicloud.cn"
+  },
+  "roles": {
+    "移动端": 512,
+    "平台服务": 510,
+    "业务服务": 1002,
+    "网页端": 511,
+    "质量": 513
+  },
+  "boardUsers": [
+    {
+      "username": "admin",
+      "password": "change-me",
+      "role": "admin",
+      "displayName": "管理员"
+    }
+  ],
+  "credentials": {
+    "username": "",
+    "password": ""
+  }
+}

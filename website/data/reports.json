@@ -1,0 +1,466 @@
+{
+  "reports": [
+    {
+      "date": "2026-03-29",
+      "summary": {
+        "totalHours": 216.8,
+        "totalPeople": 34,
+        "totalTeams": 5
+      },
+      "teams": [
+        {
+          "name": "平台服务",
+          "hours": 41.5,
+          "estimatedHours": 44,
+          "fillRate": 0.96,
+          "people": 8,
+          "totalMembers": 8,
+          "completionRate": 0.88,
+          "bugs": 2,
+          "sprints": [
+            {
+              "name": "Sprint 23",
+              "completionRate": 0.88
+            }
+          ],
+          "stories": [
+            {
+              "name": "账号鉴权链路改造",
+              "completionRate": 1,
+              "person": "张磊"
+            },
+            {
+              "name": "看板刷新接口",
+              "completionRate": 0.7,
+              "person": "周悦"
+            }
+          ],
+          "missingMembers": []
+        },
+        {
+          "name": "业务服务",
+          "hours": 49.2,
+          "estimatedHours": 46,
+          "fillRate": 0.89,
+          "people": 8,
+          "totalMembers": 9,
+          "completionRate": 0.81,
+          "bugs": 3,
+          "sprints": [
+            {
+              "name": "Sprint 18",
+              "completionRate": 0.81
+            }
+          ],
+          "stories": [
+            {
+              "name": "日报聚合逻辑",
+              "completionRate": 0.9,
+              "person": "王涛"
+            }
+          ],
+          "missingMembers": [
+            "刘楠"
+          ]
+        },
+        {
+          "name": "网页端",
+          "hours": 45.1,
+          "estimatedHours": 40,
+          "fillRate": 0.86,
+          "people": 6,
+          "totalMembers": 7,
+          "completionRate": 0.74,
+          "bugs": 4,
+          "sprints": [
+            {
+              "name": "Sprint 12",
+              "completionRate": 0.74
+            }
+          ],
+          "stories": [
+            {
+              "name": "风险卡片组件",
+              "completionRate": 0.8,
+              "person": "赵萌"
+            }
+          ],
+          "missingMembers": [
+            "陈宇"
+          ]
+        },
+        {
+          "name": "移动端",
+          "hours": 37,
+          "estimatedHours": 43,
+          "fillRate": 0.78,
+          "people": 5,
+          "totalMembers": 7,
+          "completionRate": 0.62,
+          "bugs": 6,
+          "sprints": [
+            {
+              "name": "Sprint 30",
+              "completionRate": 0.62
+            }
+          ],
+          "stories": [
+            {
+              "name": "迭代看板适配",
+              "completionRate": 0.55,
+              "person": "杨帆"
+            }
+          ],
+          "missingMembers": [
+            "高峰",
+            "朱琳"
+          ]
+        },
+        {
+          "name": "质量",
+          "hours": 44,
+          "estimatedHours": 42,
+          "fillRate": 0.92,
+          "people": 7,
+          "totalMembers": 7,
+          "completionRate": 0.79,
+          "bugs": 2,
+          "sprints": [
+            {
+              "name": "Sprint 30",
+              "completionRate": 0.79
+            }
+          ],
+          "stories": [
+            {
+              "name": "回归冒烟脚本",
+              "completionRate": 0.82,
+              "person": "苏航"
+            }
+          ],
+          "missingMembers": []
+        }
+      ],
+      "risks": [
+        {
+          "level": "high",
+          "type": "进度滞后",
+          "description": "移动端迭代完成率低于 75%",
+          "team": "移动端",
+          "suggestion": "增加开发投入并拆分剩余任务"
+        },
+        {
+          "level": "medium",
+          "type": "Bug数偏高",
+          "description": "移动端当日 Bug 数超过 5 个",
+          "team": "移动端",
+          "suggestion": "优先关闭阻断型缺陷"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-30",
+      "summary": {
+        "totalHours": 223.5,
+        "totalPeople": 35,
+        "totalTeams": 5
+      },
+      "teams": [
+        {
+          "name": "平台服务",
+          "hours": 42.8,
+          "estimatedHours": 44,
+          "fillRate": 0.96,
+          "people": 8,
+          "totalMembers": 8,
+          "completionRate": 0.9,
+          "bugs": 1,
+          "sprints": [
+            {
+              "name": "Sprint 23",
+              "completionRate": 0.9
+            }
+          ],
+          "stories": [
+            {
+              "name": "接口鉴权优化",
+              "completionRate": 1,
+              "person": "张磊"
+            }
+          ],
+          "missingMembers": []
+        },
+        {
+          "name": "业务服务",
+          "hours": 50.3,
+          "estimatedHours": 47,
+          "fillRate": 0.9,
+          "people": 8,
+          "totalMembers": 9,
+          "completionRate": 0.83,
+          "bugs": 2,
+          "sprints": [
+            {
+              "name": "Sprint 18",
+              "completionRate": 0.83
+            }
+          ],
+          "stories": [
+            {
+              "name": "日报查询 API",
+              "completionRate": 0.92,
+              "person": "王涛"
+            }
+          ],
+          "missingMembers": [
+            "刘楠"
+          ]
+        },
+        {
+          "name": "网页端",
+          "hours": 46,
+          "estimatedHours": 42,
+          "fillRate": 0.86,
+          "people": 6,
+          "totalMembers": 7,
+          "completionRate": 0.78,
+          "bugs": 2,
+          "sprints": [
+            {
+              "name": "Sprint 12",
+              "completionRate": 0.78
+            }
+          ],
+          "stories": [
+            {
+              "name": "趋势图优化",
+              "completionRate": 0.86,
+              "person": "赵萌"
+            }
+          ],
+          "missingMembers": [
+            "陈宇"
+          ]
+        },
+        {
+          "name": "移动端",
+          "hours": 39.4,
+          "estimatedHours": 43,
+          "fillRate": 0.82,
+          "people": 6,
+          "totalMembers": 7,
+          "completionRate": 0.68,
+          "bugs": 4,
+          "sprints": [
+            {
+              "name": "Sprint 30",
+              "completionRate": 0.68
+            }
+          ],
+          "stories": [
+            {
+              "name": "移动端缺陷清理",
+              "completionRate": 0.62,
+              "person": "杨帆"
+            }
+          ],
+          "missingMembers": [
+            "朱琳"
+          ]
+        },
+        {
+          "name": "质量",
+          "hours": 45,
+          "estimatedHours": 42,
+          "fillRate": 1,
+          "people": 7,
+          "totalMembers": 7,
+          "completionRate": 0.81,
+          "bugs": 1,
+          "sprints": [
+            {
+              "name": "Sprint 30",
+              "completionRate": 0.81
+            }
+          ],
+          "stories": [
+            {
+              "name": "回归清单",
+              "completionRate": 0.88,
+              "person": "苏航"
+            }
+          ],
+          "missingMembers": []
+        }
+      ],
+      "risks": [
+        {
+          "level": "medium",
+          "type": "进度滞后",
+          "description": "移动端迭代完成率仍低于 75%",
+          "team": "移动端",
+          "suggestion": "继续跟进冲刺计划"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "summary": {
+        "totalHours": 229.4,
+        "totalPeople": 36,
+        "totalTeams": 5
+      },
+      "teams": [
+        {
+          "name": "平台服务",
+          "hours": 39,
+          "estimatedHours": 45,
+          "fillRate": 0.95,
+          "people": 7,
+          "totalMembers": 8,
+          "completionRate": 0.85,
+          "bugs": 2,
+          "sprints": [
+            {
+              "name": "Sprint 23",
+              "completionRate": 0.85
+            }
+          ],
+          "stories": [
+            {
+              "name": "用户登录模块",
+              "completionRate": 1,
+              "person": "张三"
+            },
+            {
+              "name": "项目刷新任务",
+              "completionRate": 0.72,
+              "person": "李明"
+            }
+          ],
+          "missingMembers": [
+            "李四"
+          ]
+        },
+        {
+          "name": "业务服务",
+          "hours": 51.6,
+          "estimatedHours": 48,
+          "fillRate": 0.9,
+          "people": 9,
+          "totalMembers": 10,
+          "completionRate": 0.84,
+          "bugs": 1,
+          "sprints": [
+            {
+              "name": "Sprint 18",
+              "completionRate": 0.84
+            }
+          ],
+          "stories": [
+            {
+              "name": "日报聚合接口",
+              "completionRate": 0.94,
+              "person": "王涛"
+            }
+          ],
+          "missingMembers": [
+            "黄莉"
+          ]
+        },
+        {
+          "name": "网页端",
+          "hours": 47.3,
+          "estimatedHours": 43,
+          "fillRate": 0.86,
+          "people": 6,
+          "totalMembers": 7,
+          "completionRate": 0.8,
+          "bugs": 2,
+          "sprints": [
+            {
+              "name": "Sprint 12",
+              "completionRate": 0.8
+            }
+          ],
+          "stories": [
+            {
+              "name": "看板首页布局",
+              "completionRate": 0.93,
+              "person": "赵萌"
+            }
+          ],
+          "missingMembers": [
+            "陈宇"
+          ]
+        },
+        {
+          "name": "移动端",
+          "hours": 41.5,
+          "estimatedHours": 44,
+          "fillRate": 0.83,
+          "people": 6,
+          "totalMembers": 7,
+          "completionRate": 0.72,
+          "bugs": 3,
+          "sprints": [
+            {
+              "name": "Sprint 30",
+              "completionRate": 0.72
+            }
+          ],
+          "stories": [
+            {
+              "name": "移动端项目详情",
+              "completionRate": 0.68,
+              "person": "杨帆"
+            }
+          ],
+          "missingMembers": [
+            "朱琳"
+          ]
+        },
+        {
+          "name": "质量",
+          "hours": 50,
+          "estimatedHours": 43,
+          "fillRate": 1,
+          "people": 8,
+          "totalMembers": 8,
+          "completionRate": 0.82,
+          "bugs": 2,
+          "sprints": [
+            {
+              "name": "Sprint 30",
+              "completionRate": 0.82
+            }
+          ],
+          "stories": [
+            {
+              "name": "自动化回归",
+              "completionRate": 0.88,
+              "person": "苏航"
+            }
+          ],
+          "missingMembers": []
+        }
+      ],
+      "risks": [
+        {
+          "level": "high",
+          "type": "进度滞后",
+          "description": "移动端迭代完成率低于 75%",
+          "team": "移动端",
+          "suggestion": "加快开发进度"
+        },
+        {
+          "level": "medium",
+          "type": "填报率低",
+          "description": "网页端填报率低于 90%",
+          "team": "网页端",
+          "suggestion": "提醒未填报成员完成工时填报"
+        }
+      ]
+    }
+  ]
+}

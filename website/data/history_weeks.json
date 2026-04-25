@@ -1,0 +1,25 @@
+{
+  "period": "weeks",
+  "items": [
+    {
+      "label": "第11周",
+      "totalHours": 1042.5,
+      "fillRate": 0.88
+    },
+    {
+      "label": "第12周",
+      "totalHours": 1098.2,
+      "fillRate": 0.9
+    },
+    {
+      "label": "第13周",
+      "totalHours": 1116.4,
+      "fillRate": 0.91
+    },
+    {
+      "label": "第14周",
+      "totalHours": 1169.7,
+      "fillRate": 0.92
+    }
+  ]
+}

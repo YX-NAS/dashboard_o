@@ -1,0 +1,20 @@
+{
+  "period": "quarters",
+  "items": [
+    {
+      "label": "2025-Q3",
+      "totalHours": 12680.4,
+      "fillRate": 0.85
+    },
+    {
+      "label": "2025-Q4",
+      "totalHours": 13320.5,
+      "fillRate": 0.88
+    },
+    {
+      "label": "2026-Q1",
+      "totalHours": 14180.7,
+      "fillRate": 0.91
+    }
+  ]
+}

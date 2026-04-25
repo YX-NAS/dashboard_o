@@ -1,0 +1,4 @@
+website/config/project-config.local.json
+website/data/sessions.json
+website/data/runtime.json
+.DS_Store

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>红圈项目看板系统 - 迭代详情</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <div>
+            <h1 class="page-title" id="projectName">红圈项目看板系统</h1>
+            <div class="hero-meta" id="projectMeta"></div>
+          </div>
+          <nav class="nav-links">
+            <a class="nav-link" href="/board.html">主看板</a>
+            <a class="nav-link active" href="/sprint.html">迭代详情</a>
+            <a class="nav-link" href="/retrospect.html">复盘页面</a>
+          </nav>
+        </div>
+        <div class="topbar-right">
+          <button class="secondary-button" id="logoutButton">退出登录</button>
+        </div>
+      </header>
+      <main class="app-main">
+        <section class="hero">
+          <div>
+            <h2 class="page-title">迭代详情</h2>
+            <div class="hero-meta">展示各团队冲刺完成率、当前故事进度和责任人。</div>
+          </div>
+        </section>
+
+        <section id="sprintPanels" class="grid"></section>
+      </main>
+    </div>
+    <script src="/assets/shared.js"></script>
+    <script src="/assets/sprint.js"></script>
+  </body>
+</html>
